@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chainproof"
+version = "0.2.0"
+description = "Tamper-evident evidence and chain-of-custody toolkit"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Mrk-Kernel" }]
+keywords = ["forensics", "chain-of-custody", "audit-log", "ed25519", "hash-chain"]
+dependencies = [
+    "cryptography>=42.0",
+    "fpdf2>=2.8.0",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: System :: Filesystems",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov>=4.0"]
+
+[project.scripts]
+chainproof = "chainproof:main"
+
+[tool.setuptools]
+py-modules = ["chainproof"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["modules*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

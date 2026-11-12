@@ -1,0 +1,14 @@
+*.pyc
+__pycache__/
+.env
+venv/
+.venv/
+.keys/
+*.pem
+case/
+logs/
+reports/
+*.pdf
+*.json
+.pytest_cache/
+.DS_Store
