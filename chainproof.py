@@ -1,5 +1,7 @@
 """chainproof.py - ChainProof: tamper-evident evidence and chain-of-custody toolkit."""
 
+__watermark__ = "Mrk"
+
 import argparse
 import hashlib
 import sys
